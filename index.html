@@ -15,6 +15,7 @@
         <nav class="nav">
             <div class="nav-brand">Tennis Tactics</div>
             <ul class="nav-links">
+                <li><a href="#match-prep">AI Match Prep</a></li>
                 <li><a href="#shots">Shot Strategy</a></li>
                 <li><a href="#mental">Mental Game</a></li>
             </ul>
@@ -25,8 +26,154 @@
         </div>
     </header>
 
+    <!-- AI Match Preparation Section -->
+    <section id="match-prep" class="section">
+        <div class="container">
+            <h2>AI Match Preparation</h2>
+            <p class="section-desc">Generate a personalized game plan with tactics, mental strategies, and practice drills</p>
+
+            <div class="tool-card">
+                <div class="prep-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="opponent-name">Opponent Name (optional)</label>
+                            <input type="text" id="opponent-name" class="form-input" placeholder="e.g., John Smith">
+                        </div>
+                        <div class="form-group">
+                            <label for="match-surface">Playing Surface</label>
+                            <select id="match-surface" class="filter-select">
+                                <option value="hard">Hard Court</option>
+                                <option value="clay">Clay</option>
+                                <option value="grass">Grass</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="opponent-style">Opponent's Playing Style</label>
+                            <select id="opponent-style" class="filter-select">
+                                <option value="aggressive-baseliner">Aggressive Baseliner</option>
+                                <option value="counterpuncher">Counterpuncher / Defensive</option>
+                                <option value="serve-volley">Serve & Volley</option>
+                                <option value="all-court">All-Court Player</option>
+                                <option value="pusher">Pusher / Moon-baller</option>
+                                <option value="big-server">Big Server</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="match-importance">Match Importance</label>
+                            <select id="match-importance" class="filter-select">
+                                <option value="practice">Practice Match</option>
+                                <option value="league">League Match</option>
+                                <option value="tournament">Tournament Match</option>
+                                <option value="finals">Finals / Important Match</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Opponent's Strengths (select all that apply)</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="opp-strength" value="forehand"> Strong Forehand
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="opp-strength" value="backhand"> Strong Backhand
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="opp-strength" value="serve"> Big Serve
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="opp-strength" value="volleys"> Good at Net
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="opp-strength" value="speed"> Fast / Athletic
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="opp-strength" value="consistency"> Very Consistent
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="opp-strength" value="mental"> Mentally Tough
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="opp-strength" value="power"> Powerful Shots
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Opponent's Weaknesses (select all that apply)</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="opp-weakness" value="forehand"> Weak Forehand
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="opp-weakness" value="backhand"> Weak Backhand
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="opp-weakness" value="serve"> Weak Serve
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="opp-weakness" value="volleys"> Poor at Net
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="opp-weakness" value="movement"> Poor Movement
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="opp-weakness" value="fitness"> Poor Fitness
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="opp-weakness" value="mental"> Gets Frustrated
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="opp-weakness" value="pressure"> Chokes Under Pressure
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Your Strengths (select all that apply)</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="my-strength" value="forehand"> Strong Forehand
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="my-strength" value="backhand"> Strong Backhand
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="my-strength" value="serve"> Good Serve
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="my-strength" value="volleys"> Good at Net
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="my-strength" value="speed"> Fast / Athletic
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="my-strength" value="consistency"> Consistent
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="my-strength" value="mental"> Mentally Strong
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="my-strength" value="slice"> Good Slice
+                            </label>
+                        </div>
+                    </div>
+
+                    <button id="generate-plan" class="generate-btn">
+                        <span class="btn-icon">&#9889;</span> Generate Match Plan
+                    </button>
+                </div>
+
+                <div id="match-plan-results" class="results"></div>
+            </div>
+        </div>
+    </section>
+
     <!-- Shot Recommendation Section -->
-    <section id="shots" class="section">
+    <section id="shots" class="section section-alt">
         <div class="container">
             <h2>Shot Recommendation Tool</h2>
             <p class="section-desc">Enter a shot type and get tactical recommendations based on your opponent and playing surface</p>
@@ -72,7 +219,7 @@
     </section>
 
     <!-- Mental Strategies Section -->
-    <section id="mental" class="section section-alt">
+    <section id="mental" class="section">
         <div class="container">
             <h2>Mental Strategies</h2>
             <p class="section-desc">Describe your mental state and get techniques to regain focus and composure</p>
@@ -101,5 +248,6 @@
 
     <script src="js/shots.js"></script>
     <script src="js/mental.js"></script>
+    <script src="js/match-prep.js"></script>
 </body>
 </html>

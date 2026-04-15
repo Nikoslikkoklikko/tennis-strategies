@@ -2,6 +2,10 @@
 const shotTactics = {
     forehand: {
         name: "Forehand",
+        video: {
+            id: "rm6Ys74Ueqk",
+            title: "Forehand Tactics & Strategy Guide"
+        },
         tactics: {
             "aggressive-baseliner": {
                 hard: [
@@ -219,6 +223,10 @@ const shotTactics = {
     },
     backhand: {
         name: "Backhand",
+        video: {
+            id: "yQvDjFEjjog",
+            title: "Backhand Tactics & Strategy Guide"
+        },
         tactics: {
             "aggressive-baseliner": {
                 hard: [
@@ -436,6 +444,10 @@ const shotTactics = {
     },
     serve: {
         name: "Serve",
+        video: {
+            id: "FQBoLhSoz3M",
+            title: "Serve Tactics & Placement Strategy"
+        },
         tactics: {
             "aggressive-baseliner": {
                 hard: [
@@ -653,6 +665,10 @@ const shotTactics = {
     },
     volley: {
         name: "Volley",
+        video: {
+            id: "c7P0hBGNFPM",
+            title: "Volley Tactics & Net Play Strategy"
+        },
         tactics: {
             "aggressive-baseliner": {
                 hard: [
@@ -870,6 +886,10 @@ const shotTactics = {
     },
     "serve return": {
         name: "Serve Return",
+        video: {
+            id: "6FKqOiP63lg",
+            title: "Return of Serve Tactics & Strategy"
+        },
         tactics: {
             "aggressive-baseliner": {
                 hard: [
@@ -1087,6 +1107,10 @@ const shotTactics = {
     },
     "drop shot": {
         name: "Drop Shot",
+        video: {
+            id: "FwCEhSfQrQY",
+            title: "Drop Shot Tactics & When to Use It"
+        },
         tactics: {
             "aggressive-baseliner": {
                 hard: [
@@ -1430,12 +1454,27 @@ function displayShotResults(shot) {
     }
 
     const shotName = shotTactics[shot].name;
+    const video = shotTactics[shot].video;
 
     shotResults.innerHTML = `
         <div class="result-header">
             <h3>${shotName} Tactics</h3>
             <span class="result-count">${tactics.length} strategies</span>
         </div>
+        ${video ? `
+        <div class="video-container">
+            <h4 class="video-title">${video.title}</h4>
+            <div class="video-wrapper">
+                <iframe
+                    src="https://www.youtube.com/embed/${video.id}"
+                    title="${video.title}"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+        ` : ''}
         ${tactics.map(t => `
             <div class="result-card">
                 <h4>${t.title}</h4>

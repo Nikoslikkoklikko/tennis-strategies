@@ -3,6 +3,10 @@ const mentalStrategies = {
     nervous: {
         name: "Nervous / Anxious",
         keywords: ["nervous", "anxious", "anxiety", "scared", "worried", "tense", "butterflies", "jittery"],
+        video: {
+            id: "rDKKXjEEqnA",
+            title: "How to Handle Nerves in Tennis"
+        },
         strategies: [
             {
                 title: "Box Breathing Technique",
@@ -34,6 +38,10 @@ const mentalStrategies = {
     frustrated: {
         name: "Frustrated / Angry",
         keywords: ["frustrated", "angry", "mad", "annoyed", "irritated", "upset", "furious", "rage"],
+        video: {
+            id: "zL7CsAqd0-c",
+            title: "Controlling Anger & Frustration in Tennis"
+        },
         strategies: [
             {
                 title: "The 16-Second Cure",
@@ -70,6 +78,10 @@ const mentalStrategies = {
     unfocused: {
         name: "Unfocused / Distracted",
         keywords: ["unfocused", "distracted", "can't concentrate", "losing focus", "mind wandering", "not present", "scattered"],
+        video: {
+            id: "3MqYfNKSvLE",
+            title: "Tennis Focus & Concentration Tips"
+        },
         strategies: [
             {
                 title: "Ball Focus Technique",
@@ -106,6 +118,10 @@ const mentalStrategies = {
     tired: {
         name: "Tired / Fatigued",
         keywords: ["tired", "fatigued", "exhausted", "low energy", "sluggish", "drained", "heavy legs", "no energy"],
+        video: {
+            id: "Y6PqfRgXsOk",
+            title: "Playing Tennis When Tired - Mental Tips"
+        },
         strategies: [
             {
                 title: "Strategic Energy Conservation",
@@ -142,6 +158,10 @@ const mentalStrategies = {
     losing: {
         name: "Losing / Behind in Score",
         keywords: ["losing", "behind", "down", "getting beaten", "outplayed", "losing badly", "can't win"],
+        video: {
+            id: "0bT7JMX5GvE",
+            title: "How to Come Back When Losing in Tennis"
+        },
         strategies: [
             {
                 title: "Focus on the Process",
@@ -178,6 +198,10 @@ const mentalStrategies = {
     pressure: {
         name: "Feeling Pressure / Big Points",
         keywords: ["pressure", "big point", "tight", "choking", "can't close", "match point", "set point", "break point", "important point"],
+        video: {
+            id: "sRsmYsnOCQI",
+            title: "How to Handle Pressure Points in Tennis"
+        },
         strategies: [
             {
                 title: "Stick to Your Routine",
@@ -214,6 +238,10 @@ const mentalStrategies = {
     confident: {
         name: "Lost Confidence / Self-Doubt",
         keywords: ["no confidence", "doubt", "self-doubt", "unsure", "hesitant", "don't trust", "lost confidence", "can't believe"],
+        video: {
+            id: "QaZ4JNpvxgA",
+            title: "Building Confidence in Tennis"
+        },
         strategies: [
             {
                 title: "Recall Past Success",
@@ -250,6 +278,10 @@ const mentalStrategies = {
     overthinking: {
         name: "Overthinking / Analysis Paralysis",
         keywords: ["overthinking", "thinking too much", "paralysis", "confused", "too many thoughts", "in my head", "can't decide"],
+        video: {
+            id: "0n5FRQKCjGg",
+            title: "Stop Overthinking in Tennis Matches"
+        },
         strategies: [
             {
                 title: "Trust Your Instincts",
@@ -286,6 +318,10 @@ const mentalStrategies = {
     intimidated: {
         name: "Intimidated by Opponent",
         keywords: ["intimidated", "scared of opponent", "better player", "outmatched", "can't beat", "too good", "no chance"],
+        video: {
+            id: "1K4G7U5nbZA",
+            title: "Playing Against Better Opponents"
+        },
         strategies: [
             {
                 title: "Focus on Yourself",
@@ -322,6 +358,10 @@ const mentalStrategies = {
     serving: {
         name: "Struggling with Serve / Double Faults",
         keywords: ["serving", "double fault", "serve problems", "can't serve", "serving badly", "yips", "service problems"],
+        video: {
+            id: "VqV3F6Qgpjc",
+            title: "Fixing Double Faults & Serve Yips"
+        },
         strategies: [
             {
                 title: "Slow Down Your Motion",
@@ -424,11 +464,27 @@ function displayMentalStrategies(state) {
         return;
     }
 
+    const video = stateData.video;
+
     mentalResults.innerHTML = `
         <div class="result-header">
             <h3>Strategies for: ${stateData.name}</h3>
             <span class="result-count">${stateData.strategies.length} techniques</span>
         </div>
+        ${video ? `
+        <div class="video-container">
+            <h4 class="video-title">${video.title}</h4>
+            <div class="video-wrapper">
+                <iframe
+                    src="https://www.youtube.com/embed/${video.id}"
+                    title="${video.title}"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+        ` : ''}
         ${stateData.strategies.map(s => `
             <div class="strategy-card">
                 <h4>${s.title}</h4>

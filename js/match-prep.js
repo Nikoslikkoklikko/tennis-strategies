@@ -880,5 +880,15 @@ function toggleDrillVideo(button, videoId) {
     }
 }
 
-// Event Listener
-document.getElementById('generate-plan').addEventListener('click', generateMatchPlan);
+// Event Listener with ripple effect
+document.getElementById('generate-plan').addEventListener('click', function(e) {
+    const btn = this;
+    const ripple = document.createElement('span');
+    ripple.classList.add('ripple-effect');
+    const rect = btn.getBoundingClientRect();
+    ripple.style.left = (e.clientX - rect.left) + 'px';
+    ripple.style.top = (e.clientY - rect.top) + 'px';
+    btn.appendChild(ripple);
+    ripple.addEventListener('animationend', () => ripple.remove());
+    generateMatchPlan();
+});

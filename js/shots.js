@@ -219,7 +219,39 @@ const shotTactics = {
                     }
                 ]
             }
-        }
+        },
+        footworkDrills: [
+            {
+                name: "Split Step Timing",
+                duration: "10 min",
+                description: "Stand at the baseline. As your partner hits, perform a split step exactly when they make contact. Shuffle laterally to reach the ball and hit a forehand, then recover to center.",
+                focus: "Time your split step to your opponent's contact point — not before, not after."
+            },
+            {
+                name: "Open Stance Rapid Fire",
+                duration: "8 min",
+                description: "Partner feeds balls rapidly to your forehand side. Practice loading into an open stance and rotating your hips explosively. No backswing — just hip and shoulder rotation.",
+                focus: "Drive power from hip rotation, not arm swing."
+            },
+            {
+                name: "Inside-Out Footwork Drill",
+                duration: "10 min",
+                description: "Start at center. Cone is placed on the ad side. Sprint around the cone, set up with your inside-out stance, hit a forehand down the line, and recover to center before the next feed.",
+                focus: "Fast around-the-backhand steps and immediate recovery after the shot."
+            },
+            {
+                name: "Approach Shot Shuffle",
+                duration: "8 min",
+                description: "Partner feeds short balls. Sprint forward, split step on the short ball, hit an approach forehand, and immediately close to the net. Use crossover steps to close.",
+                focus: "Momentum through the shot — don't slow down on approach."
+            },
+            {
+                name: "Side-to-Side Recovery",
+                duration: "12 min",
+                description: "Two cones placed 3m each side of center. Partner alternates wide forehands. Sprint to each cone, hit, then recover to center before the next feed. Increase pace each set.",
+                focus: "Recovery steps back to center — shuffle, don't cross."
+            }
+        ]
     },
     backhand: {
         name: "Backhand",
@@ -440,7 +472,39 @@ const shotTactics = {
                     }
                 ]
             }
-        }
+        },
+        footworkDrills: [
+            {
+                name: "Two-Step Approach",
+                duration: "10 min",
+                description: "Partner feeds to your backhand. Practice taking two quick steps into the ball — step forward with the front foot, then pivot the back foot to load. Hit and recover to center.",
+                focus: "Don't reach — step into every backhand."
+            },
+            {
+                name: "Closed Stance Loading",
+                duration: "8 min",
+                description: "Use a cone to mark the contact zone. Feed yourself or have a partner toss. Practice turning sideways completely (closed stance) before swinging. Hold the finish.",
+                focus: "Full shoulder turn before you swing."
+            },
+            {
+                name: "Wide Backhand Sprint",
+                duration: "10 min",
+                description: "Cones placed 4m wide on the backhand side. Sprint to each wide feed, plant and hit, then recover with shuffle steps. Start slow and increase feed speed each minute.",
+                focus: "Plant the outside foot before swinging — don't run through the shot."
+            },
+            {
+                name: "Down-the-Line Footwork",
+                duration: "8 min",
+                description: "Stand slightly to the ad side. Partner feeds to backhand. Practice stepping around the ball to attack down the line with an inside-in backhand. Quick recovery after.",
+                focus: "Create an angle with your feet, not just your racket."
+            },
+            {
+                name: "Slice and Recover",
+                duration: "12 min",
+                description: "Partner feeds deep with pace. Retreat two steps, hit a slice backhand, then immediately move forward and recover to your base position. Repeat with alternating depths.",
+                focus: "Stay low on the slice — bend your knees on the backpedal."
+            }
+        ]
     },
     serve: {
         name: "Serve",
@@ -661,7 +725,39 @@ const shotTactics = {
                     }
                 ]
             }
-        }
+        },
+        footworkDrills: [
+            {
+                name: "Trophy Position Load",
+                duration: "10 min",
+                description: "Without a ball, practice your serve motion with emphasis on leg loading. Reach the trophy position, pause for 1 second, feel your weight on the back leg, then drive up and through.",
+                focus: "Leg push from the ground — your legs generate most of your serve power."
+            },
+            {
+                name: "Recovery Split Step",
+                duration: "8 min",
+                description: "Serve and immediately sprint to the T position. Land a split step and react to a partner's return feed. Trains the split step reflex after the serve.",
+                focus: "Split step must land as the returner contacts the ball — active feet, not frozen."
+            },
+            {
+                name: "Toss and Step Drill",
+                duration: "10 min",
+                description: "Place a cone at your ideal toss position. Practice tossing the ball and stepping your front foot forward in sync. The foot lands as the toss reaches its peak.",
+                focus: "Coordinate your foot movement with your toss — they must be synchronized."
+            },
+            {
+                name: "Wide Serve Sprint",
+                duration: "8 min",
+                description: "Serve wide to the deuce or ad court, then shuffle two steps to cover the open court. Partner feeds to the open side. Trains automatic repositioning after wide serves.",
+                focus: "Read the open court before the ball lands — anticipate, don't react."
+            },
+            {
+                name: "Second Serve Pressure Reps",
+                duration: "12 min",
+                description: "Serve only second serves under pressure. After each serve, crouch into a ready position with a split step. Hold 5 reps in a row before increasing difficulty.",
+                focus: "Maintain controlled breathing and a consistent pre-serve routine."
+            }
+        ]
     },
     volley: {
         name: "Volley",
@@ -882,7 +978,39 @@ const shotTactics = {
                     }
                 ]
             }
-        }
+        },
+        footworkDrills: [
+            {
+                name: "Split Step at Service Line",
+                duration: "10 min",
+                description: "Start at the baseline, run to the service line, land a split step, then explode to a cone placed left or right. Touch the cone and close to the net. Builds the explosive split step habit.",
+                focus: "Your split step must be a jump, not just a shuffle — get air under your feet."
+            },
+            {
+                name: "Approach and Close",
+                duration: "8 min",
+                description: "Start at the T. Partner feeds a ball to either side at net height. Sprint to intercept, punch the volley, and immediately reset to the T position. 10 reps each side.",
+                focus: "Crossover steps to close — big steps, not baby shuffles."
+            },
+            {
+                name: "Low Volley Bend Drill",
+                duration: "8 min",
+                description: "Partner feeds low balls at your feet. Focus on bending at the knees to get low — not bending at the waist. Keep your racket head up and punch through.",
+                focus: "Knees bent, head still — stay compact, don't reach down."
+            },
+            {
+                name: "Punch and Recover",
+                duration: "10 min",
+                description: "Stand 1 meter inside the service box. Partner alternates feeds left and right. One crossover step to each ball, punch volley, recover to center. Increase feed speed over 3 sets.",
+                focus: "One explosive step — no re-adjustment steps allowed."
+            },
+            {
+                name: "Net Rush Sprint",
+                duration: "12 min",
+                description: "From the baseline, sprint to the net on a signal. Land a split step just inside the service box, volley the feed, then retreat and repeat. Simulate rushing the net after an approach.",
+                focus: "Control your momentum — don't over-run the ball."
+            }
+        ]
     },
     "serve return": {
         name: "Serve Return",
@@ -1103,7 +1231,39 @@ const shotTactics = {
                     }
                 ]
             }
-        }
+        },
+        footworkDrills: [
+            {
+                name: "Return Position Drill",
+                duration: "8 min",
+                description: "Practice standing 1-2 meters behind the baseline. Partner serves and you practice your split step reaction. Move laterally to a cone and simulate a return swing. No ball needed initially.",
+                focus: "Start position matters — stand where you can cover both sides equally."
+            },
+            {
+                name: "Step-In Return",
+                duration: "10 min",
+                description: "Partner hits medium-pace serves. Take one aggressive step forward as the ball bounces, hitting it on the rise. Finish with your weight moving forward through the court.",
+                focus: "Attack the ball — step into the return instead of waiting for it."
+            },
+            {
+                name: "Split Step Reaction Drill",
+                duration: "10 min",
+                description: "Stand in return position. Partner tosses and calls 'left' or 'right' at the moment of 'serve'. Perform a split step and explode in the called direction. Trains your first step off the split.",
+                focus: "Split step timing is everything — jump as the server tosses, not after they hit."
+            },
+            {
+                name: "Back-Up Kick Serve Drill",
+                duration: "8 min",
+                description: "Partner serves kick serves to your backhand. Practice retreating one quick step to give yourself room, then drive forward through the ball. Prevents getting jammed.",
+                focus: "One step back, then attack — never just stand still on a kick serve."
+            },
+            {
+                name: "Cross-Court Drive Footwork",
+                duration: "10 min",
+                description: "Partner serves down the T. Step diagonally across to intercept, planting your outside foot and driving crosscourt. Then recover to position before next serve.",
+                focus: "Cross-step to inside-out position — use your body to redirect pace."
+            }
+        ]
     },
     "drop shot": {
         name: "Drop Shot",
@@ -1324,7 +1484,39 @@ const shotTactics = {
                     }
                 ]
             }
-        }
+        },
+        footworkDrills: [
+            {
+                name: "Sprint and Stop Drill",
+                duration: "10 min",
+                description: "Start 4 meters behind the ball. On signal, sprint forward, brake hard with a low split step, and simulate a soft touch shot. The explosive stop is the key skill.",
+                focus: "Brake with both feet, don't lean forward — you need a stable base to touch the ball softly."
+            },
+            {
+                name: "Approach and Follow",
+                duration: "8 min",
+                description: "Hit a drop shot from the baseline, then immediately sprint to the net to follow it in. Hold at the net T position and volley any return. Trains the drop-shot-and-close pattern.",
+                focus: "Don't admire the shot — move forward the instant you hit it."
+            },
+            {
+                name: "Behind-the-Ball Footwork",
+                duration: "10 min",
+                description: "Partner feeds balls to your forehand and backhand. Before each shot, sprint sideways past the ball, then step back through the contact point. Loads your body to decelerate through a soft shot.",
+                focus: "Get behind the ball, not to it — you need to move through the shot, not reach."
+            },
+            {
+                name: "Recovery After Drop Shot",
+                duration: "8 min",
+                description: "Hit a drop shot, then immediately shuffle back to the baseline as fast as possible. Partner returns deep. Trains you to recover when the drop shot isn't a winner.",
+                focus: "Turn and sprint — don't backpedal after a drop shot."
+            },
+            {
+                name: "Feint and Drop",
+                duration: "10 min",
+                description: "Take your normal groundstroke stance and preparation, then at the last second decelerate your swing and touch the ball short. Focus on keeping the same footwork pattern as a normal shot.",
+                focus: "Your feet should look identical to a normal shot — don't give away the drop with early footwork changes."
+            }
+        ]
     }
 };
 
@@ -1455,6 +1647,7 @@ function displayShotResults(shot) {
 
     const shotName = shotTactics[shot].name;
     const video = shotTactics[shot].video;
+    const footworkDrills = shotTactics[shot].footworkDrills || [];
 
     shotResults.innerHTML = `
         <div class="result-header">
@@ -1484,6 +1677,24 @@ function displayShotResults(shot) {
                 ${t.tip ? `<div class="tip">Tip: ${t.tip}</div>` : ''}
             </div>
         `).join('')}
+        ${footworkDrills.length > 0 ? `
+        <div class="footwork-section">
+            <div class="footwork-title">
+                <span class="footwork-title-icon">👟</span>
+                ${shotName} Footwork Drills
+            </div>
+            ${footworkDrills.map(d => `
+                <div class="footwork-card">
+                    <div class="footwork-card-header">
+                        <h4>${d.name}</h4>
+                        <span class="footwork-duration">${d.duration}</span>
+                    </div>
+                    <p>${d.description}</p>
+                    <div class="footwork-focus">Focus: ${d.focus}</div>
+                </div>
+            `).join('')}
+        </div>
+        ` : ''}
     `;
 }
 

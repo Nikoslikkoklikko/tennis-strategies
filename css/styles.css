@@ -862,6 +862,292 @@ body {
     }
 }
 
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse-ring {
+    0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.5); }
+    70% { box-shadow: 0 0 0 10px rgba(37, 99, 235, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+}
+
+@keyframes ripple {
+    0% { transform: scale(0); opacity: 0.6; }
+    100% { transform: scale(4); opacity: 0; }
+}
+
+@keyframes bounce-in {
+    0% { transform: scale(0.9); }
+    60% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-4px); }
+    40% { transform: translateX(4px); }
+    60% { transform: translateX(-3px); }
+    80% { transform: translateX(3px); }
+}
+
 .result-card, .strategy-card {
-    animation: fadeIn 0.3s ease-out;
+    animation: slideUp 0.35s ease-out both;
+}
+
+.result-card:nth-child(2) { animation-delay: 0.05s; }
+.result-card:nth-child(3) { animation-delay: 0.1s; }
+.result-card:nth-child(4) { animation-delay: 0.15s; }
+.result-card:nth-child(5) { animation-delay: 0.2s; }
+.result-card:nth-child(6) { animation-delay: 0.25s; }
+
+/* Enhanced Nav Links */
+.nav-links a {
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.9);
+    transition: width 0.25s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Enhanced Generate Button */
+.generate-btn {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
+}
+
+.generate-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.45);
+}
+
+.generate-btn:active {
+    transform: translateY(1px) scale(0.98);
+    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
+}
+
+.generate-btn .ripple-effect {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.35);
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    margin-left: -20px;
+    animation: ripple 0.6s linear;
+    pointer-events: none;
+}
+
+/* Enhanced Show Video Button */
+.show-video-btn {
+    position: relative;
+    overflow: hidden;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    transition: all 0.2s ease;
+}
+
+.show-video-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+}
+
+.show-video-btn:active {
+    transform: translateY(0) scale(0.97);
+}
+
+/* Enhanced Result Cards */
+.result-card {
+    cursor: default;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-left-color 0.2s ease;
+}
+
+.result-card:hover {
+    transform: translateX(4px) translateY(-2px);
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.15);
+    border-left-color: var(--primary-blue-dark);
+}
+
+/* Enhanced Strategy Cards */
+.strategy-card {
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    cursor: default;
+}
+
+.strategy-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+}
+
+/* Enhanced Suggestion Items */
+.suggestion-item {
+    transition: background-color 0.15s ease, transform 0.12s ease, padding-left 0.15s ease;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.suggestion-item:hover {
+    background-color: var(--light-blue);
+    padding-left: 1.5rem;
+    color: var(--primary-blue-dark);
+}
+
+.suggestion-item:active {
+    background-color: #dbeafe;
+    transform: scale(0.99);
+}
+
+/* Enhanced Checkbox Labels */
+.checkbox-label {
+    transition: all 0.18s ease;
+    user-select: none;
+}
+
+.checkbox-label:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(37, 99, 235, 0.2);
+}
+
+.checkbox-label:active {
+    transform: translateY(0) scale(0.97);
+}
+
+.checkbox-label:has(input:checked) {
+    background: var(--light-blue);
+    border-color: var(--primary-blue);
+    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.15);
+    animation: bounce-in 0.3s ease-out;
+}
+
+/* Enhanced Filter Selects */
+.filter-select {
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+    cursor: pointer;
+}
+
+.filter-select:hover {
+    border-color: var(--primary-blue-light);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+.filter-select:focus {
+    transform: scale(1.01);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Enhanced Search Input */
+.search-input {
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+.search-input:focus {
+    transform: scale(1.005);
+}
+
+/* Footwork Drills Section */
+.footwork-section {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 2px dashed var(--gray-200);
+}
+
+.footwork-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 1rem;
+}
+
+.footwork-title-icon {
+    font-size: 1.4rem;
+}
+
+.footwork-card {
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+    border: 1px solid #86efac;
+    border-left: 4px solid #16a34a;
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    margin-bottom: 0.85rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    animation: slideUp 0.35s ease-out both;
+}
+
+.footwork-card:hover {
+    transform: translateX(4px) translateY(-2px);
+    box-shadow: 0 6px 16px rgba(22, 163, 74, 0.15);
+}
+
+.footwork-card:nth-child(2) { animation-delay: 0.05s; }
+.footwork-card:nth-child(3) { animation-delay: 0.1s; }
+.footwork-card:nth-child(4) { animation-delay: 0.15s; }
+.footwork-card:nth-child(5) { animation-delay: 0.2s; }
+
+.footwork-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.6rem;
+}
+
+.footwork-card h4 {
+    color: #15803d;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.footwork-duration {
+    background: #16a34a;
+    color: #fff;
+    padding: 0.2rem 0.65rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.footwork-card p {
+    color: #374151;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    margin-bottom: 0.4rem;
+}
+
+.footwork-focus {
+    font-size: 0.82rem;
+    color: #6b7280;
+    font-style: italic;
+}
+
+/* Pulse on nav brand */
+.nav-brand {
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.nav-brand:hover {
+    transform: scale(1.05);
 }

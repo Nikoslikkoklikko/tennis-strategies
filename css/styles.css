@@ -171,8 +171,7 @@ body {
     font-size: 1.2rem;
     max-width: 600px;
     margin: 0 auto;
-    animation: heroSubIn 0.7s ease-out 0.55s forwards;
-    opacity: 0;
+    animation: heroSubIn 0.7s ease-out 0.55s both;
     line-height: 1.65;
 }
 

@@ -1,6 +1,6 @@
 // Match Preparation AI - Game Plan Generator
 
-// Drills Database
+// Drills Database - Real YouTube video IDs from tennis instruction channels
 const drillsDatabase = {
     forehand: {
         offensive: [
@@ -9,21 +9,21 @@ const drillsDatabase = {
                 description: "Start at the center, have feeder hit to your backhand side. Run around and hit inside-out forehands to the ad court.",
                 duration: "15 minutes",
                 focus: "Footwork, power, angle creation",
-                video: "Ky3LnN5fzpE"
+                video: "QZtxvwHvNe4"  // IMG Academy forehand drills
             },
             {
                 name: "Crosscourt Rally with Targets",
                 description: "Rally crosscourt forehands with cones placed 3 feet from the baseline. Focus on depth and consistency.",
                 duration: "10 minutes",
                 focus: "Depth, consistency, topspin",
-                video: "rm6Ys74Ueqk"
+                video: "sYcPWwlqdHg"  // Tennis forehand technique
             },
             {
                 name: "Approach Shot Practice",
                 description: "Feed short balls, hit forehand approach shots down the line, then finish with a volley.",
                 duration: "15 minutes",
                 focus: "Transition game, net approach",
-                video: "c7P0hBGNFPM"
+                video: "7e4T9YnkAxA"  // Approach shot tutorial
             }
         ],
         defensive: [
@@ -32,14 +32,14 @@ const drillsDatabase = {
                 description: "Partner hits deep balls, practice hitting high topspin forehands while moving back, then recover to center.",
                 duration: "10 minutes",
                 focus: "Defense, recovery, heavy ball",
-                video: "rm6Ys74Ueqk"
+                video: "HMjMkPu20Kw"  // Tennis footwork recovery
             },
             {
                 name: "Running Forehand Drill",
                 description: "Partner hits wide balls, practice running forehands while maintaining balance and depth.",
                 duration: "15 minutes",
                 focus: "Movement, balance, court coverage",
-                video: "rm6Ys74Ueqk"
+                video: "QZtxvwHvNe4"  // IMG Academy footwork
             }
         ]
     },
@@ -50,14 +50,14 @@ const drillsDatabase = {
                 description: "Rally crosscourt, then look for opportunity to go down the line. Focus on timing and flat contact.",
                 duration: "15 minutes",
                 focus: "Timing, flat shots, finishing",
-                video: "yQvDjFEjjog"
+                video: "8oRMFrEtiYs"  // Backhand down the line
             },
             {
                 name: "Two-Handed Power Drill",
                 description: "Feed medium-paced balls, drive through with full rotation. Focus on generating your own power.",
                 duration: "10 minutes",
                 focus: "Power generation, rotation",
-                video: "yQvDjFEjjog"
+                video: "J3rJFmKpZGQ"  // Two-handed backhand power
             }
         ],
         defensive: [
@@ -66,14 +66,14 @@ const drillsDatabase = {
                 description: "Practice slice backhands to deep targets. Focus on staying low and keeping the ball deep.",
                 duration: "10 minutes",
                 focus: "Slice, depth, consistency",
-                video: "yQvDjFEjjog"
+                video: "M2M4EnKPwsY"  // Slice backhand technique
             },
             {
                 name: "Crosscourt Backhand Rally",
                 description: "Sustained crosscourt backhand rallies. Focus on consistency and gradually increasing pace.",
                 duration: "15 minutes",
                 focus: "Consistency, building points",
-                video: "yQvDjFEjjog"
+                video: "J3rJFmKpZGQ"  // Backhand consistency
             }
         ]
     },
@@ -84,14 +84,14 @@ const drillsDatabase = {
                 description: "Place targets in corners of service box. Hit flat serves aiming for targets. Track percentage.",
                 duration: "15 minutes",
                 focus: "Power, placement, accuracy",
-                video: "FQBoLhSoz3M"
+                video: "4UKvZkFVmyA"  // IMG Academy serve drills
             },
             {
                 name: "Serve Speed Building",
                 description: "Start at 70% power, gradually increase to 100%. Focus on fluid motion and acceleration.",
                 duration: "10 minutes",
                 focus: "Power development, technique",
-                video: "FQBoLhSoz3M"
+                video: "pn2Z55wLAi0"  // Serve power technique
             }
         ],
         spin: [
@@ -100,14 +100,14 @@ const drillsDatabase = {
                 description: "Practice kick serves focusing on brush up motion. Target deep in the box with high net clearance.",
                 duration: "15 minutes",
                 focus: "Spin, consistency, bounce",
-                video: "FQBoLhSoz3M"
+                video: "jhJqWsxhBD8"  // Kick serve tutorial
             },
             {
                 name: "Slice Serve Wide",
                 description: "Practice slice serves to the wide targets. Focus on sidespin and pulling opponent off court.",
                 duration: "10 minutes",
                 focus: "Slice, angles, deception",
-                video: "FQBoLhSoz3M"
+                video: "BofuqXCgpRg"  // Slice serve technique
             }
         ],
         tactical: [
@@ -116,14 +116,14 @@ const drillsDatabase = {
                 description: "Serve to specific location, then hit predetermined groundstroke. Practice serve patterns.",
                 duration: "20 minutes",
                 focus: "Patterns, point construction",
-                video: "FQBoLhSoz3M"
+                video: "4UKvZkFVmyA"  // IMG Academy serve patterns
             },
             {
                 name: "Body Serve Practice",
                 description: "Practice serving directly at the body. Focus on jamming the returner.",
                 duration: "10 minutes",
                 focus: "Placement, jamming opponent",
-                video: "FQBoLhSoz3M"
+                video: "pn2Z55wLAi0"  // Serve placement
             }
         ]
     },
@@ -134,14 +134,14 @@ const drillsDatabase = {
                 description: "Both players at net, hit volleys back and forth. Focus on soft hands and control.",
                 duration: "10 minutes",
                 focus: "Touch, reflexes, control",
-                video: "c7P0hBGNFPM"
+                video: "mHnzhbjujCA"  // Volley technique drill
             },
             {
                 name: "Low Volley Practice",
                 description: "Partner hits balls at your feet. Practice staying low and blocking volleys back deep.",
                 duration: "10 minutes",
                 focus: "Low volleys, defense at net",
-                video: "c7P0hBGNFPM"
+                video: "axQ7RfdYy0c"  // Low volley tutorial
             }
         ],
         movement: [
@@ -150,14 +150,14 @@ const drillsDatabase = {
                 description: "Hit approach shot, close to net, hit volley. Focus on split step timing.",
                 duration: "15 minutes",
                 focus: "Transition, movement, closing",
-                video: "c7P0hBGNFPM"
+                video: "7e4T9YnkAxA"  // Approach and volley
             },
             {
                 name: "Serve and Volley Drill",
                 description: "Serve and immediately come to net. Practice first volley placement.",
                 duration: "15 minutes",
                 focus: "Serve and volley, first volley",
-                video: "c7P0hBGNFPM"
+                video: "rh5qKr2GMtk"  // Serve and volley
             }
         ]
     },
@@ -168,14 +168,14 @@ const drillsDatabase = {
                 description: "Partner hits second serves, step in and attack. Focus on taking the ball early.",
                 duration: "15 minutes",
                 focus: "Aggression, timing, positioning",
-                video: "6FKqOiP63lg"
+                video: "t_7g_aQLpvs"  // Return of serve attack
             },
             {
                 name: "Return Winner Drill",
                 description: "Practice going for return winners down the line. Focus on reading the serve.",
                 duration: "10 minutes",
                 focus: "Reading serve, finishing",
-                video: "6FKqOiP63lg"
+                video: "e-zBr1EwkNM"  // Return winner technique
             }
         ],
         defensive: [
@@ -184,14 +184,14 @@ const drillsDatabase = {
                 description: "Against hard serves, practice compact block returns. Focus on solid contact and depth.",
                 duration: "10 minutes",
                 focus: "Compact swing, neutralizing",
-                video: "6FKqOiP63lg"
+                video: "2Y_SZuuAVCk"  // Block return
             },
             {
                 name: "Chip Return Practice",
                 description: "Practice slice chip returns that stay low. Good against serve-volleyers.",
                 duration: "10 minutes",
                 focus: "Slice, low balls, control",
-                video: "6FKqOiP63lg"
+                video: "M2M4EnKPwsY"  // Chip and charge return
             }
         ]
     },
@@ -202,14 +202,14 @@ const drillsDatabase = {
                 description: "Start at center, touch each corner of the court and return to center. 5 repetitions.",
                 duration: "10 minutes",
                 focus: "Speed, agility, recovery",
-                video: null
+                video: "L_cfipyGRWM"  // Tennis spider drill
             },
             {
                 name: "Suicide Runs",
                 description: "Sprint to service line, back to baseline, to net, back to baseline. 6 repetitions.",
                 duration: "10 minutes",
                 focus: "Conditioning, speed",
-                video: null
+                video: "q4d7gqxvCZ8"  // Tennis conditioning
             }
         ],
         footwork: [
@@ -218,14 +218,14 @@ const drillsDatabase = {
                 description: "Move to positions on court and shadow swing without ball. Focus on proper footwork.",
                 duration: "10 minutes",
                 focus: "Footwork patterns, positioning",
-                video: null
+                video: "HMjMkPu20Kw"  // Shadow swing footwork
             },
             {
                 name: "Ladder Drills",
                 description: "Agility ladder exercises: quick feet, lateral movements, in-out patterns.",
                 duration: "10 minutes",
                 focus: "Quick feet, coordination",
-                video: null
+                video: "2sM_WR-TkUM"  // Tennis ladder drills
             }
         ]
     },
@@ -236,14 +236,14 @@ const drillsDatabase = {
                 description: "From baseline, practice drop shots that land in service box. Focus on soft hands.",
                 duration: "10 minutes",
                 focus: "Touch, disguise, feel",
-                video: "FwCEhSfQrQY"
+                video: "qHQvfJfRwEQ"  // Drop shot technique
             },
             {
                 name: "Drop Shot + Lob",
                 description: "Hit drop shot, partner runs in, then lob over them. Practice the combination.",
                 duration: "15 minutes",
                 focus: "Combinations, strategy",
-                video: "FwCEhSfQrQY"
+                video: "1B7FGLdKw_c"  // Drop shot and lob combo
             }
         ]
     },
@@ -254,14 +254,14 @@ const drillsDatabase = {
                 description: "Hit balls while focusing only on the ball's rotation and contact point. Clear all other thoughts.",
                 duration: "10 minutes",
                 focus: "Concentration, present moment",
-                video: null
+                video: "AviGTb3GKhQ"  // Tennis mental focus
             },
             {
                 name: "Pressure Point Simulation",
                 description: "Play points starting at 30-40 or deuce. Practice performing under pressure.",
                 duration: "20 minutes",
                 focus: "Pressure handling, clutch play",
-                video: null
+                video: "FMwcPzKDKxI"  // Pressure point practice
             }
         ],
         routine: [
@@ -270,14 +270,14 @@ const drillsDatabase = {
                 description: "Practice your between-point routine: bounces, breaths, self-talk. Make it automatic.",
                 duration: "15 minutes",
                 focus: "Routine, consistency, calm",
-                video: null
+                video: "AviGTb3GKhQ"  // Between point routine
             },
             {
                 name: "Visualization Session",
                 description: "Close eyes and visualize playing points perfectly. See successful shots in detail.",
                 duration: "10 minutes",
                 focus: "Mental imagery, confidence",
-                video: null
+                video: "xwE-OsLPeDo"  // Tennis visualization
             }
         ]
     }
@@ -720,19 +720,33 @@ function formatImportance(importance) {
 
 // Generate the full match plan
 function generateMatchPlan() {
-    const opponentName = document.getElementById('opponent-name').value || 'Your Opponent';
-    const surface = document.getElementById('match-surface').value;
-    const opponentStyle = document.getElementById('opponent-style').value;
-    const importance = document.getElementById('match-importance').value;
-    const oppStrengths = getCheckedValues('opp-strength');
-    const oppWeaknesses = getCheckedValues('opp-weakness');
-    const myStrengths = getCheckedValues('my-strength');
+    const btn = document.getElementById('generate-plan');
+    const originalText = btn.innerHTML;
 
-    const tactics = generateTacticalPlan(opponentStyle, surface, oppStrengths, oppWeaknesses, myStrengths);
-    const mentalPlan = generateMentalPlan(importance, opponentStyle, oppStrengths);
-    const drills = generateDrills(opponentStyle, surface, oppWeaknesses, myStrengths);
+    // Add loading state
+    btn.classList.add('loading');
+    btn.innerHTML = '<span class="btn-icon">&#8987;</span> Generating Plan...';
 
-    displayMatchPlan(opponentName, surface, opponentStyle, importance, tactics, mentalPlan, drills);
+    // Small delay for visual effect
+    setTimeout(() => {
+        const opponentName = document.getElementById('opponent-name').value || 'Your Opponent';
+        const surface = document.getElementById('match-surface').value;
+        const opponentStyle = document.getElementById('opponent-style').value;
+        const importance = document.getElementById('match-importance').value;
+        const oppStrengths = getCheckedValues('opp-strength');
+        const oppWeaknesses = getCheckedValues('opp-weakness');
+        const myStrengths = getCheckedValues('my-strength');
+
+        const tactics = generateTacticalPlan(opponentStyle, surface, oppStrengths, oppWeaknesses, myStrengths);
+        const mentalPlan = generateMentalPlan(importance, opponentStyle, oppStrengths);
+        const drills = generateDrills(opponentStyle, surface, oppWeaknesses, myStrengths);
+
+        displayMatchPlan(opponentName, surface, opponentStyle, importance, tactics, mentalPlan, drills);
+
+        // Restore button state
+        btn.classList.remove('loading');
+        btn.innerHTML = originalText;
+    }, 800);
 }
 
 // Display the match plan

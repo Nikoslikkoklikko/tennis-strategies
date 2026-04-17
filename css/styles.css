@@ -1530,3 +1530,391 @@ body {
 .plan-meta .meta-tag:nth-child(1) { animation-delay: 0.1s; }
 .plan-meta .meta-tag:nth-child(2) { animation-delay: 0.2s; }
 .plan-meta .meta-tag:nth-child(3) { animation-delay: 0.3s; }
+
+/* ================================
+   TENNIS IMPROVEMENT GUIDE SECTION
+   ================================ */
+
+.container-wide {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Guide Tabs */
+.guide-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.guide-tab {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.5rem;
+    background: var(--white);
+    border: 2px solid var(--gray-200);
+    border-radius: var(--radius);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--gray-700);
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-family: inherit;
+}
+
+.guide-tab:hover {
+    border-color: var(--primary-blue-light);
+    background: var(--light-blue);
+    transform: translateY(-2px);
+}
+
+.guide-tab.active {
+    background: var(--primary-blue);
+    border-color: var(--primary-blue);
+    color: var(--white);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.tab-icon {
+    font-size: 1.2rem;
+}
+
+/* Guide Content Container */
+.guide-content {
+    min-height: 400px;
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Category Header */
+.category-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.category-header h3 {
+    font-size: 1.5rem;
+    color: var(--gray-900);
+    margin-bottom: 0.5rem;
+}
+
+.category-header p {
+    color: var(--gray-500);
+}
+
+/* Subcategory Sections */
+.subcategory {
+    margin-bottom: 2.5rem;
+}
+
+.subcategory h4 {
+    font-size: 1.15rem;
+    color: var(--primary-blue-dark);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--light-blue);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.subcategory h4::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 20px;
+    background: var(--primary-blue);
+    border-radius: 2px;
+}
+
+/* Card Grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.25rem;
+}
+
+/* Book Cards */
+.book-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--gray-200);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.book-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-blue-light);
+}
+
+.book-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+}
+
+.book-card h5 {
+    font-size: 1.1rem;
+    color: var(--gray-900);
+    margin: 0;
+    flex: 1;
+}
+
+.book-author {
+    color: var(--primary-blue);
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+}
+
+.book-description {
+    color: var(--gray-600);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    flex: 1;
+}
+
+.book-card .key-takeaway {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--gray-200);
+    font-size: 0.875rem;
+    color: var(--gray-500);
+}
+
+.book-card .key-takeaway strong {
+    color: var(--primary-blue-dark);
+}
+
+/* Podcast Cards */
+.podcast-card {
+    background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+    border: 1px solid #e9d5ff;
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.podcast-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(168, 85, 247, 0.15);
+    border-color: #c084fc;
+}
+
+.podcast-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.podcast-card h5 {
+    font-size: 1.1rem;
+    color: #7c3aed;
+    margin: 0;
+}
+
+.podcast-host {
+    color: #9333ea;
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+}
+
+.podcast-description {
+    color: var(--gray-700);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+}
+
+.podcast-topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.podcast-topic {
+    background: #a855f7;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+/* Tip Cards */
+.tip-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-left: 4px solid var(--primary-blue);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    transition: all 0.3s ease;
+}
+
+.tip-card:hover {
+    transform: translateX(4px);
+    box-shadow: var(--shadow);
+    border-left-color: var(--primary-blue-dark);
+}
+
+.tip-card h5 {
+    color: var(--gray-900);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.tip-card p {
+    color: var(--gray-600);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+}
+
+.tip-card .exercise {
+    background: var(--light-blue);
+    border-radius: var(--radius);
+    padding: 0.75rem;
+    font-size: 0.875rem;
+}
+
+.tip-card .exercise strong {
+    color: var(--primary-blue-dark);
+}
+
+/* Difficulty Badge */
+.difficulty-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.difficulty-badge.easy {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.difficulty-badge.medium {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.difficulty-badge.hard {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+/* Frequency Badge for Podcasts */
+.frequency-badge {
+    background: #e9d5ff;
+    color: #7c3aed;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+/* Tips Grid - Single Column for Better Readability */
+.tips-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Mental Training Specific */
+.mental-tip-card {
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+    border: 1px solid #86efac;
+    border-left: 4px solid #16a34a;
+}
+
+.mental-tip-card:hover {
+    border-left-color: #15803d;
+    box-shadow: 0 6px 16px rgba(22, 163, 74, 0.15);
+}
+
+.mental-tip-card .exercise {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+/* Fitness Specific */
+.fitness-card {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border: 1px solid #fcd34d;
+    border-left: 4px solid #f59e0b;
+}
+
+.fitness-card:hover {
+    border-left-color: #d97706;
+    box-shadow: 0 6px 16px rgba(245, 158, 11, 0.15);
+}
+
+.fitness-card .exercise {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+/* Technical Skills Specific */
+.technical-card {
+    border-left-color: var(--primary-blue);
+}
+
+.technical-card:hover {
+    border-left-color: var(--primary-blue-dark);
+}
+
+/* Card Stagger Animation */
+.card-grid > *,
+.tips-grid > * {
+    animation: slideUp 0.35s ease-out both;
+}
+
+.card-grid > *:nth-child(1),
+.tips-grid > *:nth-child(1) { animation-delay: 0.05s; }
+.card-grid > *:nth-child(2),
+.tips-grid > *:nth-child(2) { animation-delay: 0.1s; }
+.card-grid > *:nth-child(3),
+.tips-grid > *:nth-child(3) { animation-delay: 0.15s; }
+.card-grid > *:nth-child(4),
+.tips-grid > *:nth-child(4) { animation-delay: 0.2s; }
+.card-grid > *:nth-child(5),
+.tips-grid > *:nth-child(5) { animation-delay: 0.25s; }
+.card-grid > *:nth-child(6),
+.tips-grid > *:nth-child(6) { animation-delay: 0.3s; }
+
+/* Responsive Guide Styles */
+@media (max-width: 768px) {
+    .guide-tabs {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .guide-tab {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .book-header,
+    .podcast-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .container-wide {
+        padding: 0 1rem;
+    }
+}

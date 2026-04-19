@@ -198,7 +198,11 @@ const guideData = {
                     "Building confidence after a loss",
                     "Improving footwork at any age"
                 ],
-                link: "https://www.essentialtennis.com/podcast",
+                links: {
+                    website: "https://essentialtennis.podbean.com/",
+                    spotify: "https://open.spotify.com/show/2JwyaSJzd8RP62hFNJpMCY",
+                    main: "https://www.essentialtennis.com/"
+                },
                 rating: 5
             },
             {
@@ -214,12 +218,16 @@ const guideData = {
                     "Historical tennis analysis",
                     "Behind-the-scenes tour stories"
                 ],
-                link: "https://www.thetennispodcast.com",
+                links: {
+                    website: "https://www.thetennispodcast.net/",
+                    apple: "https://podcasts.apple.com/us/podcast/the-tennis-podcast/id530971441",
+                    spotify: "https://open.spotify.com/show/1Xc2ruRbdmNS5sG2XJ9LYh"
+                },
                 rating: 5
             },
             {
                 name: "Cracked Racquets",
-                host: "Various",
+                host: "Alex Gruskin & Various",
                 description: "Fresh perspective on tennis news and culture. Combines analysis with entertainment for an engaging listen.",
                 episodes: "400+",
                 frequency: "Weekly",
@@ -230,12 +238,16 @@ const guideData = {
                     "Tennis culture and trends",
                     "Hot takes and debates"
                 ],
-                link: "https://crackedracquets.com",
+                links: {
+                    website: "https://crackedracquets.com/",
+                    apple: "https://podcasts.apple.com/us/channel/cracked-racquets/id6445044099",
+                    youtube: "https://www.youtube.com/c/crackedracquets"
+                },
                 rating: 4
             },
             {
-                name: "Tennis.com Podcast",
-                host: "Various tennis.com staff",
+                name: "TENNIS.com Podcast",
+                host: "Kamau Murray",
                 description: "Official Tennis.com podcast with interviews, analysis, and instruction from top coaches and players.",
                 episodes: "200+",
                 frequency: "Weekly",
@@ -246,11 +258,15 @@ const guideData = {
                     "Equipment discussions",
                     "Tennis fitness advice"
                 ],
-                link: "https://www.tennis.com/podcasts",
+                links: {
+                    website: "https://www.tennis.com/news/podcasts/",
+                    apple: "https://podcasts.apple.com/us/podcast/tennis-com-podcast/id339875623",
+                    spotify: "https://open.spotify.com/show/2ihq5SJ8N72EsloO9XunbW"
+                },
                 rating: 4
             },
             {
-                name: "Functional Tennis Podcast",
+                name: "The Functional Tennis Podcast",
                 host: "Fabio Molle",
                 description: "Interviews with top coaches and players about training methods, technique development, and the business of tennis.",
                 episodes: "200+",
@@ -262,12 +278,16 @@ const guideData = {
                     "Modern technique evolution",
                     "Coach education"
                 ],
-                link: "https://www.functionaltennis.com/podcast",
+                links: {
+                    website: "https://www.functionaltennis.com/pages/the-functional-tennis-podcast",
+                    apple: "https://podcasts.apple.com/us/podcast/the-functional-tennis-podcast/id1469714268",
+                    spotify: "https://open.spotify.com/show/5aoA7EfdfLHYM5xR5CFBPI"
+                },
                 rating: 4
             },
             {
-                name: "Behind the Racquet",
-                host: "Noah Rubin",
+                name: "Behind the Racquet Pod",
+                host: "Noah Rubin & Mike Cation",
                 description: "Former pro Noah Rubin interviews players about their personal journeys, mental health, and life on tour.",
                 episodes: "100+",
                 frequency: "Bi-weekly",
@@ -278,7 +298,11 @@ const guideData = {
                     "Challenges of the pro tour",
                     "Life after tennis"
                 ],
-                link: "https://www.behindtheracquet.com",
+                links: {
+                    website: "https://behindtheracquet.com/podcast/",
+                    apple: "https://podcasts.apple.com/us/podcast/behind-the-racquet-pod/id1296708933",
+                    spotify: "https://open.spotify.com/show/6ENiqKs4Movgp9TWUscuSt"
+                },
                 rating: 4
             }
         ]
@@ -818,6 +842,25 @@ function renderPodcasts(data) {
 
     data.items.forEach(podcast => {
         const stars = '&#9733;'.repeat(podcast.rating) + '&#9734;'.repeat(5 - podcast.rating);
+
+        // Build platform links
+        let platformLinks = '';
+        if (podcast.links) {
+            if (podcast.links.website || podcast.links.main) {
+                const webUrl = podcast.links.website || podcast.links.main;
+                platformLinks += `<a href="${webUrl}" target="_blank" rel="noopener" class="platform-link website-link">&#127760; Website</a>`;
+            }
+            if (podcast.links.spotify) {
+                platformLinks += `<a href="${podcast.links.spotify}" target="_blank" rel="noopener" class="platform-link spotify-link">&#127911; Spotify</a>`;
+            }
+            if (podcast.links.apple) {
+                platformLinks += `<a href="${podcast.links.apple}" target="_blank" rel="noopener" class="platform-link apple-link">&#127822; Apple Podcasts</a>`;
+            }
+            if (podcast.links.youtube) {
+                platformLinks += `<a href="${podcast.links.youtube}" target="_blank" rel="noopener" class="platform-link youtube-link">&#9654; YouTube</a>`;
+            }
+        }
+
         html += `
             <div class="podcast-card">
                 <div class="podcast-header">
@@ -839,9 +882,9 @@ function renderPodcasts(data) {
                         ${podcast.sampleTopics.map(t => `<li>${t}</li>`).join('')}
                     </ul>
                 </div>
-                <a href="${podcast.link}" target="_blank" rel="noopener" class="podcast-link">
-                    Listen Now &#8594;
-                </a>
+                <div class="podcast-links">
+                    ${platformLinks}
+                </div>
             </div>
         `;
     });

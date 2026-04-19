@@ -2175,6 +2175,67 @@ body {
     font-weight: bold;
 }
 
+.podcast-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.platform-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.5rem 0.875rem;
+    text-decoration: none;
+    border-radius: var(--radius);
+    font-weight: 500;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+    text-align: center;
+    justify-content: center;
+}
+
+.platform-link:hover {
+    transform: translateY(-2px);
+}
+
+.website-link {
+    background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+    color: var(--white);
+}
+
+.website-link:hover {
+    box-shadow: 0 4px 12px rgba(168, 85, 247, 0.4);
+}
+
+.spotify-link {
+    background: linear-gradient(135deg, #1DB954 0%, #169c46 100%);
+    color: var(--white);
+}
+
+.spotify-link:hover {
+    box-shadow: 0 4px 12px rgba(29, 185, 84, 0.4);
+}
+
+.apple-link {
+    background: linear-gradient(135deg, #fc3c44 0%, #d92d35 100%);
+    color: var(--white);
+}
+
+.apple-link:hover {
+    box-shadow: 0 4px 12px rgba(252, 60, 68, 0.4);
+}
+
+.youtube-link {
+    background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+    color: var(--white);
+}
+
+.youtube-link:hover {
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.4);
+}
+
 .podcast-link {
     display: inline-flex;
     align-items: center;

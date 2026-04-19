@@ -1892,6 +1892,451 @@ body {
 .card-grid > *:nth-child(6),
 .tips-grid > *:nth-child(6) { animation-delay: 0.3s; }
 
+/* Guide Intro */
+.guide-intro {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.guide-intro h3 {
+    font-size: 1.5rem;
+    color: var(--gray-900);
+    margin-bottom: 0.5rem;
+}
+
+.guide-intro p {
+    color: var(--gray-500);
+}
+
+/* Guide Category */
+.guide-category {
+    margin-bottom: 2.5rem;
+}
+
+.category-title {
+    font-size: 1.2rem;
+    color: var(--primary-blue-dark);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--light-blue);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.category-title::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 20px;
+    background: var(--primary-blue);
+    border-radius: 2px;
+}
+
+/* Books Grid */
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Book Card Enhancements */
+.book-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--gray-200);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    animation: slideUp 0.35s ease-out both;
+}
+
+.book-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-blue-light);
+}
+
+.book-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+    gap: 1rem;
+}
+
+.book-title {
+    font-size: 1.1rem;
+    color: var(--gray-900);
+    margin: 0;
+    flex: 1;
+}
+
+.book-rating {
+    color: #f59e0b;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.book-author {
+    color: var(--primary-blue);
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+}
+
+.book-description {
+    color: var(--gray-600);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    flex: 1;
+}
+
+.book-takeaways {
+    background: var(--light-blue);
+    border-radius: var(--radius);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.book-takeaways strong {
+    color: var(--primary-blue-dark);
+    font-size: 0.875rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.book-takeaways ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.book-takeaways li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: 0.35rem;
+    color: var(--gray-700);
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.book-takeaways li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-blue);
+    font-weight: bold;
+}
+
+.book-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: var(--radius);
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    text-align: center;
+    justify-content: center;
+}
+
+.book-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
+/* Podcasts Grid */
+.podcasts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Podcast Card Enhancements */
+.podcast-card {
+    background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+    border: 1px solid #e9d5ff;
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    animation: slideUp 0.35s ease-out both;
+}
+
+.podcast-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(168, 85, 247, 0.15);
+    border-color: #c084fc;
+}
+
+.podcast-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+    gap: 1rem;
+}
+
+.podcast-name {
+    font-size: 1.1rem;
+    color: #7c3aed;
+    margin: 0;
+}
+
+.podcast-rating {
+    color: #f59e0b;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.podcast-host {
+    color: #9333ea;
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+}
+
+.podcast-meta {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.75rem;
+}
+
+.meta-badge {
+    background: #e9d5ff;
+    color: #7c3aed;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.podcast-description {
+    color: var(--gray-700);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+    flex: 1;
+}
+
+.podcast-best-for {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: var(--radius);
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    color: var(--gray-700);
+}
+
+.podcast-best-for strong {
+    color: #7c3aed;
+}
+
+.podcast-topics {
+    margin-bottom: 1rem;
+}
+
+.podcast-topics strong {
+    color: #7c3aed;
+    font-size: 0.875rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.podcast-topics ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.podcast-topics li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: 0.35rem;
+    color: var(--gray-700);
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.podcast-topics li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #a855f7;
+    font-weight: bold;
+}
+
+.podcast-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: var(--radius);
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    text-align: center;
+    justify-content: center;
+}
+
+.podcast-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(168, 85, 247, 0.4);
+}
+
+/* Tips Grid */
+.tips-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Tip Card Enhancements */
+.tip-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-left: 4px solid var(--primary-blue);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    transition: all 0.3s ease;
+    animation: slideUp 0.35s ease-out both;
+}
+
+.tip-card:hover {
+    transform: translateX(4px);
+    box-shadow: var(--shadow);
+    border-left-color: var(--primary-blue-dark);
+}
+
+.tip-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.tip-title {
+    color: var(--gray-900);
+    font-size: 1.05rem;
+    margin: 0;
+}
+
+.tip-meta {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.difficulty-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.difficulty-badge.easy {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.difficulty-badge.medium {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.difficulty-badge.hard {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.time-badge {
+    background: var(--light-blue);
+    color: var(--primary-blue-dark);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.tip-description {
+    color: var(--gray-600);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.tip-actions {
+    background: var(--gray-50);
+    border-radius: var(--radius);
+    padding: 1rem;
+}
+
+.tip-actions strong {
+    color: var(--primary-blue-dark);
+    font-size: 0.875rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.tip-actions ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tip-actions li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.35rem;
+    color: var(--gray-700);
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.tip-actions li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--primary-blue);
+    font-weight: bold;
+}
+
+/* Staggered animations for cards */
+.books-grid > *:nth-child(1),
+.podcasts-grid > *:nth-child(1),
+.tips-grid > *:nth-child(1) { animation-delay: 0.05s; }
+.books-grid > *:nth-child(2),
+.podcasts-grid > *:nth-child(2),
+.tips-grid > *:nth-child(2) { animation-delay: 0.1s; }
+.books-grid > *:nth-child(3),
+.podcasts-grid > *:nth-child(3),
+.tips-grid > *:nth-child(3) { animation-delay: 0.15s; }
+.books-grid > *:nth-child(4),
+.podcasts-grid > *:nth-child(4),
+.tips-grid > *:nth-child(4) { animation-delay: 0.2s; }
+.books-grid > *:nth-child(5),
+.podcasts-grid > *:nth-child(5),
+.tips-grid > *:nth-child(5) { animation-delay: 0.25s; }
+.books-grid > *:nth-child(6),
+.podcasts-grid > *:nth-child(6),
+.tips-grid > *:nth-child(6) { animation-delay: 0.3s; }
+
 /* Responsive Guide Styles */
 @media (max-width: 768px) {
     .guide-tabs {
@@ -1904,12 +2349,14 @@ body {
         justify-content: center;
     }
 
-    .card-grid {
+    .books-grid,
+    .podcasts-grid {
         grid-template-columns: 1fr;
     }
 
     .book-header,
-    .podcast-header {
+    .podcast-header,
+    .tip-header {
         flex-direction: column;
         gap: 0.5rem;
     }

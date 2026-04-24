@@ -1432,3 +1432,434 @@ body {
 .nav-brand:hover {
     transform: scale(1.05);
 }
+
+/* ═══════════════════════════════════════════
+   TENNIS WEEKLY SECTION
+   ═══════════════════════════════════════════ */
+
+.weekly-week-label {
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--primary-blue);
+    margin-bottom: 1.75rem;
+    margin-top: -0.75rem;
+}
+
+.weekly-tabs {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.weekly-tab-btn {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 0.6rem 1.4rem;
+    border: 2px solid var(--gray-200);
+    border-radius: 999px;
+    background: var(--white);
+    color: var(--gray-500);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.weekly-tab-btn:hover {
+    border-color: var(--primary-blue-light);
+    color: var(--primary-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(37,99,235,0.15);
+}
+
+.weekly-tab-btn.active {
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark));
+    border-color: transparent;
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(37,99,235,0.35);
+}
+
+.weekly-tab-panel {
+    display: none;
+    animation: slideUp 0.3s ease-out both;
+}
+
+.weekly-tab-panel.active {
+    display: block;
+}
+
+/* Releases */
+.weekly-releases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+}
+
+.weekly-release-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    display: flex;
+    gap: 1.1rem;
+    align-items: flex-start;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.weekly-release-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.weekly-release-emoji {
+    font-size: 2.4rem;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.weekly-release-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.weekly-release-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.weekly-release-brand {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--primary-blue);
+}
+
+.weekly-release-category {
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--gray-500);
+    background: var(--gray-100);
+    padding: 0.1rem 0.5rem;
+    border-radius: 999px;
+}
+
+.weekly-release-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--gray-900);
+    letter-spacing: -0.01em;
+    margin: 0;
+}
+
+.weekly-release-desc {
+    font-size: 0.875rem;
+    color: var(--gray-500);
+    line-height: 1.55;
+    margin: 0;
+}
+
+.weekly-price-badge {
+    display: inline-block;
+    margin-top: 0.25rem;
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark));
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 800;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    align-self: flex-start;
+}
+
+/* Scores */
+.weekly-scores-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.weekly-tournament-block {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.weekly-tournament-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    background: linear-gradient(135deg, var(--primary-blue-dark), var(--primary-blue));
+    gap: 1rem;
+}
+
+.weekly-tournament-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.weekly-tournament-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.01em;
+}
+
+.weekly-tournament-round {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.75);
+    font-weight: 500;
+}
+
+.weekly-surface-badge {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+    border: 1px solid;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.weekly-match-list {
+    padding: 0.5rem 0;
+}
+
+.weekly-match-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1.25rem;
+    border-bottom: 1px solid var(--gray-100);
+    gap: 1rem;
+}
+
+.weekly-match-row:last-child { border-bottom: none; }
+
+.weekly-match-players {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.weekly-player {
+    font-size: 0.95rem;
+    color: var(--gray-500);
+    font-weight: 500;
+}
+
+.weekly-player--winner {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--gray-900);
+}
+
+.weekly-vs {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--gray-300);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.weekly-match-score {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--primary-blue-dark);
+    white-space: nowrap;
+}
+
+/* Tips */
+.weekly-tips-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.weekly-tip-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.weekly-tip-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.weekly-tip-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.85rem;
+    flex-wrap: wrap;
+}
+
+.weekly-tip-matchup {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.weekly-tip-player1,
+.weekly-tip-player2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--gray-900);
+    letter-spacing: -0.01em;
+}
+
+.weekly-tip-divider {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--gray-300);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.weekly-confidence-badge {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.85rem;
+    border-radius: 999px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.weekly-tip-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.85rem;
+    flex-wrap: wrap;
+}
+
+.weekly-tip-tournament {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--gray-700);
+}
+
+.weekly-tip-date {
+    font-size: 0.78rem;
+    color: var(--gray-500);
+}
+
+.weekly-tip-pick {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--light-blue);
+    border-left: 4px solid var(--primary-blue);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 0.6rem 1rem;
+    margin-bottom: 0.85rem;
+}
+
+.weekly-tip-pick-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--primary-blue-dark);
+    white-space: nowrap;
+}
+
+.weekly-tip-pick-value {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: var(--primary-blue-dark);
+}
+
+.weekly-tip-reasoning {
+    font-size: 0.9rem;
+    color: var(--gray-700);
+    line-height: 1.65;
+    margin-bottom: 0.85rem;
+}
+
+.weekly-tip-odds {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--gray-100);
+}
+
+.weekly-tip-odds-label {
+    font-size: 0.78rem;
+    color: var(--gray-500);
+    font-weight: 500;
+}
+
+.weekly-tip-odds-value {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 800;
+    color: var(--gray-900);
+}
+
+.weekly-disclaimer-box {
+    margin-top: 1.5rem;
+    background: #fffbeb;
+    border: 1px solid #fcd34d;
+    border-left: 4px solid #f59e0b;
+    border-radius: var(--radius);
+    padding: 1.1rem 1.25rem;
+}
+
+.weekly-disclaimer-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #92400e;
+    margin-bottom: 0.5rem;
+}
+
+.weekly-disclaimer-box p {
+    font-size: 0.82rem;
+    color: #78350f;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .weekly-releases-grid { grid-template-columns: 1fr; }
+    .weekly-tip-player1, .weekly-tip-player2 { font-size: 0.95rem; }
+    .weekly-tab-btn { font-size: 0.8rem; padding: 0.5rem 1rem; }
+}

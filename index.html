@@ -19,6 +19,7 @@
                 <li><a href="#shots">Shot Strategy</a></li>
                 <li><a href="#mental">Mental Game</a></li>
                 <li><a href="#guide">Improvement Guide</a></li>
+                <li><a href="#weekly">Tennis Weekly</a></li>
             </ul>
         </nav>
         <div class="hero-particles">
@@ -312,6 +313,35 @@
         </div>
     </section>
 
+    <!-- Tennis Weekly Section -->
+    <section id="weekly" class="section">
+        <div class="container">
+            <h2>Tennis Weekly</h2>
+            <p class="section-desc">Your weekly dose of gear releases, tournament results, and upcoming match analysis</p>
+            <p id="weekly-week-label" class="weekly-week-label"></p>
+
+            <!-- Tab Navigation -->
+            <div class="weekly-tabs" role="tablist">
+                <button class="weekly-tab-btn" data-tab="releases" role="tab" aria-controls="tab-releases">🎾 New Releases</button>
+                <button class="weekly-tab-btn" data-tab="scores" role="tab" aria-controls="tab-scores">🏆 Scores &amp; News</button>
+                <button class="weekly-tab-btn" data-tab="tips" role="tab" aria-controls="tab-tips">📊 Match Tips</button>
+            </div>
+
+            <!-- Tab Panels -->
+            <div id="tab-releases" class="weekly-tab-panel" role="tabpanel">
+                <div id="weekly-releases-list" class="weekly-releases-grid"></div>
+            </div>
+
+            <div id="tab-scores" class="weekly-tab-panel" role="tabpanel">
+                <div id="weekly-scores-list" class="weekly-scores-list"></div>
+            </div>
+
+            <div id="tab-tips" class="weekly-tab-panel" role="tabpanel">
+                <div id="weekly-tips-list" class="weekly-tips-list"></div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <p>Tennis Tactics & Strategies - Improve Your Game</p>
@@ -321,5 +351,7 @@
     <script src="js/mental.js"></script>
     <script src="js/match-prep.js"></script>
     <script src="js/guide.js"></script>
+    <script src="js/weekly-data.js"></script>
+    <script src="js/weekly.js"></script>
 </body>
 </html>
